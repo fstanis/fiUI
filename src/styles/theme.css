@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=block");
+@source "../components";
+
+@theme {
+  --color-background: hsl(60 7% 97%);
+  --color-foreground: hsl(220 14% 12%);
+
+  --color-card: hsl(60 7% 99%);
+  --color-card-foreground: hsl(220 14% 12%);
+
+  --color-popover: hsl(60 7% 99%);
+  --color-popover-foreground: hsl(220 14% 12%);
+
+  --color-primary: hsl(355 82% 56%);
+  --color-primary-foreground: hsl(0 0% 100%);
+
+  --color-secondary: hsl(60 4% 90%);
+  --color-secondary-foreground: hsl(220 14% 22%);
+
+  --color-muted: hsl(60 4% 91%);
+  --color-muted-foreground: hsl(220 8% 42%);
+
+  --color-accent: hsl(60 4% 92%);
+  --color-accent-foreground: hsl(220 14% 12%);
+
+  --color-destructive: hsl(0 62% 50%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+
+  --color-border: hsl(220 8% 82%);
+  --color-input: hsl(220 8% 82%);
+  --color-ring: hsl(355 82% 56%);
+
+  --font-display: "Montserrat", sans-serif;
+  --font-text: "Work Sans", sans-serif;
+
+  --animate-dialog-in: dialog-in 200ms ease-out;
+  --animate-toast-in: toast-in 200ms ease-out;
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

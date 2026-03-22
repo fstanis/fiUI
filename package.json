@@ -1,0 +1,35 @@
+{
+  "name": "fiui",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "typecheck": "bun x tsc --noEmit",
+    "lint": "bun x eslint src",
+    "lint:fix": "bun x eslint src --fix",
+    "format": "bun x prettier --write 'src/**/*.{ts,tsx}'",
+    "format:check": "bun x prettier --check 'src/**/*.{ts,tsx}'"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./theme.css": "./src/styles/theme.css"
+  },
+  "peerDependencies": {
+    "preact": "^10.0.0",
+    "@preact/signals": "^2.0.0"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.5.0",
+    "class-variance-authority": "^0.7.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.57.1",
+    "preact": "^10.29.0",
+    "@preact/signals": "^2.8.2"
+  }
+}
