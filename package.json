@@ -1,0 +1,37 @@
+{
+  "name": "fiui",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "typecheck": "bun x tsc --noEmit",
+    "lint": "bun x eslint src",
+    "lint:fix": "bun x eslint src --fix",
+    "format": "bun x prettier --write 'src/**/*.{ts,tsx}'",
+    "format:check": "bun x prettier --check 'src/**/*.{ts,tsx}'",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./theme.css": "./src/styles/theme.css"
+  },
+  "peerDependencies": {
+    "preact": "^10.0.0",
+    "@preact/signals": "^2.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@preact/preset-vite": "^2.10.6",
+    "@preact/signals": "^2.8.2",
+    "@storybook/addon-docs": "^10.5.3",
+    "@storybook/preact-vite": "^10.5.3",
+    "eslint": "^10.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "preact": "^10.29.0",
+    "prettier": "^3.8.1",
+    "storybook": "^10.5.3",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.57.1",
+    "vite": "^8.1.5"
+  }
+}

@@ -1,0 +1,61 @@
+.text {
+  font-family: var(--fi-font-mono);
+  margin: 0;
+  color: var(--fi-ink);
+}
+
+.logo {
+  font-weight: var(--fi-font-weight-semibold);
+  font-size: var(--fi-font-size-logo);
+  line-height: 1.2;
+}
+
+.heading {
+  font-weight: var(--fi-font-weight-semibold);
+  font-size: var(--fi-font-size-heading);
+  line-height: 1.3;
+}
+
+.emphasis {
+  font-weight: var(--fi-font-weight-medium);
+  font-size: var(--fi-font-size-emphasis);
+  line-height: 1.4;
+}
+
+.body {
+  font-weight: var(--fi-font-weight-regular);
+  font-size: var(--fi-font-size-body);
+  line-height: 1.5;
+}
+
+.caption {
+  font-weight: var(--fi-font-weight-regular);
+  font-size: var(--fi-font-size-caption);
+  line-height: 1.4;
+  color: var(--fi-ink-faint);
+}
+
+.overline {
+  font-weight: var(--fi-font-weight-medium);
+  font-size: var(--fi-font-size-overline);
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: var(--fi-letter-spacing-overline);
+  color: var(--fi-ink-faint);
+}
+
+.default {
+  color: var(--fi-ink);
+}
+.muted {
+  color: var(--fi-ink-muted);
+}
+.faint {
+  color: var(--fi-ink-faint);
+}
+.disabled {
+  color: var(--fi-ink-disabled);
+}
+.accent {
+  color: var(--fi-accent);
+}

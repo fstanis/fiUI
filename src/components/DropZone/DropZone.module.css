@@ -1,0 +1,54 @@
+.zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--fi-space-3);
+  border: 1.5px dashed var(--fi-border-dashed);
+  border-radius: var(--fi-radius-lg);
+  padding: 32px 20px;
+  background: var(--fi-surface-raised);
+  font-family: var(--fi-font-mono);
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color 0.12s ease,
+    background-color 0.12s ease;
+}
+
+.zone:focus-visible {
+  outline: none;
+  border-color: var(--fi-accent);
+  box-shadow: var(--fi-shadow-focus);
+}
+
+.dragging {
+  border-color: var(--fi-accent);
+  background: var(--fi-accent-tint);
+}
+
+.prompt {
+  font-weight: var(--fi-font-weight-medium);
+  font-size: var(--fi-font-size-emphasis);
+  color: var(--fi-ink);
+}
+
+.dragging .prompt {
+  color: var(--fi-accent);
+}
+
+.browse {
+  color: var(--fi-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hint {
+  font-weight: var(--fi-font-weight-regular);
+  font-size: var(--fi-font-size-body);
+  color: var(--fi-ink-faint);
+}
+
+.input {
+  display: none;
+}

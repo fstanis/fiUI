@@ -1,0 +1,22 @@
+.link {
+  font-family: var(--fi-font-mono);
+  font-size: var(--fi-font-size-body);
+  font-weight: var(--fi-font-weight-regular);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.default {
+  color: var(--fi-ink);
+}
+.default:hover {
+  color: var(--fi-accent);
+}
+
+.accent {
+  color: var(--fi-accent);
+}
+.accent:hover {
+  color: var(--fi-accent-hover);
+}

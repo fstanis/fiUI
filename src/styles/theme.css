@@ -1,0 +1,75 @@
+/**
+ * fiUI design tokens.
+ *
+ * Import once at the root of a consuming app:
+ *   import 'fiui/theme.css';
+ *
+ * Every component reads from these custom properties, so overriding a token on
+ * `:root` (or any ancestor scope) restyles the whole library.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Color — accent */
+  --fi-accent: #a32626;
+  --fi-accent-hover: #7c1c1c;
+  --fi-accent-tint: #f3dcdc;
+
+  /* Color — ink (text) */
+  --fi-ink: #1c1e21;
+  --fi-ink-muted: #6f6a60;
+  --fi-ink-faint: #9a958a;
+  --fi-ink-disabled: #c9c5ba;
+
+  /* Color — lines */
+  --fi-border-strong: #d9d5ca;
+  --fi-border: #eceae4;
+  --fi-border-faint: #f2f0ea;
+  --fi-border-dashed: #cfcabd;
+
+  /* Color — surfaces */
+  --fi-background: #fcfcfb;
+  --fi-surface: #f5f4f0;
+  --fi-surface-raised: #ffffff;
+
+  /* Color — placeholder checkerboard */
+  --fi-placeholder-a: #e8e5dd;
+  --fi-placeholder-b: #f0eee7;
+
+  /* Typography */
+  --fi-font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, monospace;
+
+  --fi-font-weight-regular: 400;
+  --fi-font-weight-medium: 500;
+  --fi-font-weight-semibold: 600;
+
+  --fi-font-size-logo: 20px;
+  --fi-font-size-heading: 16px;
+  --fi-font-size-emphasis: 14px;
+  --fi-font-size-body: 13px;
+  --fi-font-size-caption: 12px;
+  --fi-font-size-overline: 11px;
+
+  --fi-letter-spacing-overline: 0.6px;
+
+  /* Radii */
+  --fi-radius-sm: 4px;
+  --fi-radius-md: 6px;
+  --fi-radius-lg: 8px;
+  --fi-radius-pill: 999px;
+
+  /* Spacing scale */
+  --fi-space-1: 4px;
+  --fi-space-2: 6px;
+  --fi-space-3: 8px;
+  --fi-space-4: 12px;
+  --fi-space-5: 14px;
+  --fi-space-6: 18px;
+  --fi-space-7: 22px;
+  --fi-space-8: 26px;
+
+  /* Elevation */
+  --fi-shadow-menu: 0 4px 12px rgba(28, 30, 33, 0.08);
+  --fi-shadow-focus: 0 0 0 2px var(--fi-accent-tint);
+}

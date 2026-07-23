@@ -1,0 +1,12 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 46px;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--fi-border);
+  background: var(--fi-surface-raised);
+  font-family: var(--fi-font-mono);
+  font-size: var(--fi-font-size-body);
+  color: var(--fi-ink-muted);
+}

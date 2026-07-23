@@ -1,0 +1,10 @@
+.panel {
+  background: var(--fi-surface-raised);
+  border: 1px solid var(--fi-border);
+  border-radius: var(--fi-radius-lg);
+  overflow: hidden;
+}
+
+.padded {
+  padding: var(--fi-space-7) var(--fi-space-8);
+}

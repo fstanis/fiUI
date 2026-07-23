@@ -1,0 +1,11 @@
+.statusbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--fi-space-4);
+  padding: 10px 24px;
+  background: var(--fi-background);
+  font-family: var(--fi-font-mono);
+  font-size: var(--fi-font-size-caption);
+  color: var(--fi-ink-faint);
+}
