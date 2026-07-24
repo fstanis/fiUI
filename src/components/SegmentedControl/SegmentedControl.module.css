@@ -9,9 +9,6 @@
 
 .group {
   display: inline-flex;
-  border: 1px solid var(--fi-border-strong);
-  border-radius: var(--fi-radius-md);
-  overflow: hidden;
   color: var(--fi-ink);
 }
 
@@ -19,39 +16,87 @@
   font-family: var(--fi-font-mono);
   font-size: var(--fi-font-size-body);
   font-weight: var(--fi-font-weight-regular);
-  padding: var(--fi-space-1) var(--fi-space-4);
   background: transparent;
   border: none;
   color: inherit;
   cursor: pointer;
+}
+
+/* Boxed variant */
+
+.boxed {
+  border: 1px solid var(--fi-border-strong);
+  border-radius: var(--fi-radius-md);
+  overflow: hidden;
+}
+
+.boxed .segment {
+  padding: var(--fi-space-1) var(--fi-space-4);
   transition: background-color 0.12s ease;
 }
 
-.segment + .segment {
+.boxed .segment + .segment {
   border-left: 1px solid var(--fi-border-strong);
 }
 
-.segment:hover:not(.selected):not(:disabled) {
+.boxed .segment:hover:not(.selected):not(:disabled) {
   background: var(--fi-surface);
 }
 
-.selected {
+.boxed .selected {
   background: var(--fi-accent);
   color: #fff;
   cursor: default;
 }
 
+/* Inline variant */
+
+.inline {
+  align-items: baseline;
+  gap: var(--fi-space-2);
+  color: var(--fi-ink-faint);
+}
+
+.inline .segment {
+  padding: 0 0 2px;
+  color: var(--fi-ink-faint);
+  border-bottom: 1px solid transparent;
+  transition:
+    color 0.12s ease,
+    border-color 0.12s ease;
+}
+
+.separator {
+  color: var(--fi-ink-faint);
+  user-select: none;
+}
+
+.inline .segment:hover:not(.selected):not(:disabled) {
+  color: var(--fi-ink-muted);
+}
+
+.inline .selected {
+  color: var(--fi-ink);
+  border-bottom-color: var(--fi-accent-line);
+  cursor: default;
+}
+
+/* Disabled */
+
 .disabled .group {
-  border-color: var(--fi-border);
   color: var(--fi-ink-disabled);
 }
 .disabled .segment {
   cursor: not-allowed;
 }
-.disabled .segment + .segment {
+.disabled.boxed,
+.disabled .boxed {
+  border-color: var(--fi-border);
+}
+.disabled .boxed .segment + .segment {
   border-left-color: var(--fi-border);
 }
-.disabled .selected {
+.disabled .boxed .selected {
   background: var(--fi-border);
   color: var(--fi-ink-faint);
 }

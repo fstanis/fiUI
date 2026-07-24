@@ -1,0 +1,42 @@
+.callout {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--fi-space-5);
+  padding: 9px 18px;
+  border-radius: var(--fi-radius-md);
+  font-family: var(--fi-font-mono);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.accent {
+  background: var(--fi-accent-tint);
+  color: var(--fi-accent);
+}
+
+.neutral {
+  background: var(--fi-surface);
+  color: var(--fi-ink-muted);
+}
+
+.message {
+  flex: 1;
+}
+
+.action {
+  font-family: var(--fi-font-mono);
+  font-size: inherit;
+  font-weight: var(--fi-font-weight-medium);
+  color: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.action:focus-visible {
+  outline: none;
+  text-decoration-thickness: 2px;
+}

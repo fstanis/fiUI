@@ -1,3 +1,5 @@
+export { cx } from './internal/cx';
+
 export { Text } from './components/Text';
 export type { TextProps, TextVariant, TextTone } from './components/Text';
 
@@ -8,7 +10,11 @@ export { Link } from './components/Link';
 export type { LinkProps, LinkVariant } from './components/Link';
 
 export { SegmentedControl } from './components/SegmentedControl';
-export type { SegmentedControlProps, SegmentOption } from './components/SegmentedControl';
+export type {
+  SegmentedControlProps,
+  SegmentOption,
+  SegmentedControlVariant,
+} from './components/SegmentedControl';
 
 export { Tabs } from './components/Tabs';
 export type { TabsProps, TabOption } from './components/Tabs';
@@ -54,3 +60,9 @@ export type { ToolbarProps } from './components/Toolbar';
 
 export { StatusBar } from './components/StatusBar';
 export type { StatusBarProps } from './components/StatusBar';
+
+export { Stat } from './components/Stat';
+export type { StatProps, StatTone, StatAlign } from './components/Stat';
+
+export { Callout } from './components/Callout';
+export type { CalloutProps, CalloutVariant, CalloutAction } from './components/Callout';

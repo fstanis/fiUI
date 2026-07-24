@@ -1,0 +1,35 @@
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--fi-space-2);
+  font-family: var(--fi-font-mono);
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+}
+
+.start {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: var(--fi-font-weight-medium);
+  line-height: 1.2;
+  color: var(--fi-ink);
+}
+
+.label {
+  font-size: var(--fi-font-size-overline);
+  font-weight: var(--fi-font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--fi-letter-spacing-overline);
+  color: var(--fi-ink-faint);
+}
+
+.accent .value {
+  color: var(--fi-accent);
+}

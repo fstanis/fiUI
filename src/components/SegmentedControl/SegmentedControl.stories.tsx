@@ -40,8 +40,25 @@ function StripDemo() {
   );
 }
 
+function InlineDemo() {
+  const [value, setValue] = useState('box');
+  return (
+    <SegmentedControl
+      variant="inline"
+      value={value}
+      onChange={setValue}
+      options={[
+        { label: 'box 4-4-4-4', value: 'box' },
+        { label: '4-7-8', value: 'p478' },
+        { label: 'coherent 5.5', value: 'coherent' },
+      ]}
+    />
+  );
+}
+
 export const WithLabel: Story = { render: () => <FormatDemo /> };
 export const TwoOptions: Story = { render: () => <StripDemo /> };
+export const Inline: Story = { render: () => <InlineDemo /> };
 
 export const Disabled: Story = {
   render: () => (
