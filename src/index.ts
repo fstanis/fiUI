@@ -10,6 +10,9 @@ export type { LinkProps, LinkVariant } from './components/Link';
 export { SegmentedControl } from './components/SegmentedControl';
 export type { SegmentedControlProps, SegmentOption } from './components/SegmentedControl';
 
+export { Tabs } from './components/Tabs';
+export type { TabsProps, TabOption } from './components/Tabs';
+
 export { TextField } from './components/TextField';
 export type { TextFieldProps } from './components/TextField';
 

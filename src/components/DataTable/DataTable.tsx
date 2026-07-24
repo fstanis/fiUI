@@ -28,6 +28,8 @@ export interface DataTableProps<Row> {
   rowKey?: (row: Row, index: number) => string | number;
   /** Message shown when there are no rows. */
   emptyText?: ComponentChildren;
+  /** Renders the column header row. Set to `false` for header-less tables. Defaults to `true`. */
+  showHeader?: boolean;
   class?: string;
 }
 
@@ -45,6 +47,7 @@ export function DataTable<Row>({
   rows,
   rowKey,
   emptyText = 'No rows',
+  showHeader = true,
   class: className,
 }: DataTableProps<Row>) {
   const gridTemplateColumns = columns.map((column) => column.width ?? '1fr').join(' ');
@@ -53,13 +56,15 @@ export function DataTable<Row>({
 
   return (
     <div class={cx(styles.table, className)} role="table">
-      <div class={styles.header} style={rowStyle} role="row">
-        {columns.map((column) => (
-          <span key={column.id} role="columnheader" class={cx(styles.cell, styles[column.align ?? 'left'])}>
-            {column.header}
-          </span>
-        ))}
-      </div>
+      {showHeader && (
+        <div class={styles.header} style={rowStyle} role="row">
+          {columns.map((column) => (
+            <span key={column.id} role="columnheader" class={cx(styles.cell, styles[column.align ?? 'left'])}>
+              {column.header}
+            </span>
+          ))}
+        </div>
+      )}
       {rows.length === 0 ? (
         <div class={styles.empty}>{emptyText}</div>
       ) : (
