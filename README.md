@@ -36,17 +36,19 @@ Override a token in your own stylesheet to re-skin the whole library:
 
 ## Components
 
-| Group      | Components                                              |
-| ---------- | ------------------------------------------------------- |
-| Foundation | `Text`, `Panel`                                         |
-| Actions    | `Button`, `Link`, `SegmentedControl`                    |
-| Inputs     | `TextField`, `Select`, `Menu`, `DropZone`               |
-| Data       | `DataTable`, `KeyValueList`, `ProgressBar`, `Placeholder` |
-| Feedback   | `Badge`, `Spinner`, `Kbd`                               |
-| Chrome     | `MenuBar`, `Toolbar`, `StatusBar`                       |
+| Group      | Components                                         |
+| ---------- | -------------------------------------------------- |
+| Foundation | `Text`, `Panel`                                    |
+| Actions    | `Button`, `Link`, `SegmentedControl`, `Tabs`       |
+| Inputs     | `TextField`, `Select`, `Menu`, `DropZone`          |
+| Data       | `DataTable`, `KeyValueList`, `ProgressBar`, `Stat` |
+| Feedback   | `Badge`, `Spinner`, `Kbd`, `Callout`, `Modal`      |
+| Chrome     | `MenuBar`, `Toolbar`, `StatusBar`                  |
 
 Every component is typed and takes a `class` prop for one-off overrides. Interactive
-components (`SegmentedControl`, `Select`, `DropZone`) are controlled.
+components (`SegmentedControl`, `Tabs`, `Select`, `DropZone`, `Modal`) are controlled —
+`Modal` renders nothing while `isOpen` is false and calls `onDismiss` on backdrop click
+or Escape.
 
 ## Storybook
 

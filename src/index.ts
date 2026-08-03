@@ -10,11 +10,7 @@ export { Link } from './components/Link';
 export type { LinkProps, LinkVariant } from './components/Link';
 
 export { SegmentedControl } from './components/SegmentedControl';
-export type {
-  SegmentedControlProps,
-  SegmentOption,
-  SegmentedControlVariant,
-} from './components/SegmentedControl';
+export type { SegmentedControlProps, SegmentOption, SegmentedControlVariant } from './components/SegmentedControl';
 
 export { Tabs } from './components/Tabs';
 export type { TabsProps, TabOption } from './components/Tabs';
@@ -51,6 +47,9 @@ export type { DataTableProps, Column, ColumnAlign } from './components/DataTable
 
 export { Panel } from './components/Panel';
 export type { PanelProps } from './components/Panel';
+
+export { Modal } from './components/Modal';
+export type { ModalProps } from './components/Modal';
 
 export { MenuBar } from './components/MenuBar';
 export type { MenuBarProps } from './components/MenuBar';

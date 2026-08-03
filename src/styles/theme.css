@@ -33,6 +33,7 @@
   --fi-background: #fcfcfb;
   --fi-surface: #f5f4f0;
   --fi-surface-raised: #ffffff;
+  --fi-scrim: rgba(28, 30, 33, 0.28);
 
   /* Color — placeholder checkerboard */
   --fi-placeholder-a: #e8e5dd;
@@ -72,5 +73,6 @@
 
   /* Elevation */
   --fi-shadow-menu: 0 4px 12px rgba(28, 30, 33, 0.08);
+  --fi-shadow-modal: 0 18px 48px rgba(28, 30, 33, 0.16);
   --fi-shadow-focus: 0 0 0 2px var(--fi-accent-tint);
 }
