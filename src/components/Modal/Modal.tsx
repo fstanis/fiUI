@@ -8,8 +8,10 @@ export interface ModalProps {
   isOpen: boolean;
   /** The dialog's heading, which also names it for assistive technology. */
   title: ComponentChildren;
-  /** Called when the backdrop is clicked or Escape is pressed. */
+  /** Called when the backdrop is clicked, Escape is pressed, or the close control is chosen. */
   onDismiss: () => void;
+  /** Renders a `close` control beside the title. Defaults to `false`. */
+  hasCloseControl?: boolean;
   /** Buttons for the footer row, right-aligned in the order given. */
   actions?: ComponentChildren;
   class?: string;
@@ -17,7 +19,15 @@ export interface ModalProps {
 }
 
 /** A dialog laid over the page that takes focus until it is dismissed. */
-export function Modal({ isOpen, title, onDismiss, actions, class: className, children }: ModalProps) {
+export function Modal({
+  isOpen,
+  title,
+  onDismiss,
+  hasCloseControl = false,
+  actions,
+  class: className,
+  children,
+}: ModalProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const titleId = useId();
 
@@ -62,9 +72,16 @@ export function Modal({ isOpen, title, onDismiss, actions, class: className, chi
         class={cx(styles.dialog, className)}
         onClick={(event) => event.stopPropagation()}
       >
-        <span id={titleId} class={styles.title}>
-          {title}
-        </span>
+        <div class={styles.header}>
+          <span id={titleId} class={styles.title}>
+            {title}
+          </span>
+          {hasCloseControl && (
+            <button type="button" class={styles.close} onClick={onDismiss}>
+              close
+            </button>
+          )}
+        </div>
         {children}
         {actions && <div class={styles.actions}>{actions}</div>}
       </div>

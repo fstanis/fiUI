@@ -1,0 +1,47 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--fi-space-3);
+  padding: 9px 0;
+  border-bottom: 1px solid var(--fi-border-faint);
+  font-family: var(--fi-font-mono);
+}
+
+.field:last-child {
+  border-bottom: none;
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--fi-space-6);
+}
+
+/* Two stacked lines centre against their control; two single lines read better sharing a baseline. */
+.stacked {
+  align-items: center;
+}
+
+.labelGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--fi-space-1);
+}
+
+.label {
+  font-size: var(--fi-font-size-body);
+  color: var(--fi-ink);
+}
+
+.caption {
+  font-size: var(--fi-font-size-caption);
+  line-height: 1.5;
+  color: var(--fi-ink-faint);
+}
+
+.control {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}

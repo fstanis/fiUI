@@ -3,7 +3,7 @@ import { cx } from '../../internal/cx';
 import styles from './Button.module.css';
 
 /** Visual weight of the button. */
-export type ButtonVariant = 'primary' | 'secondary' | 'toolbar';
+export type ButtonVariant = 'primary' | 'secondary' | 'toolbar' | 'quiet';
 
 export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'class'> {
   /** Visual weight. Defaults to `primary`. */

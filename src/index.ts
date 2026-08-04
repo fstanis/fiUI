@@ -18,6 +18,12 @@ export type { TabsProps, TabOption } from './components/Tabs';
 export { TextField } from './components/TextField';
 export type { TextFieldProps } from './components/TextField';
 
+export { Stepper } from './components/Stepper';
+export type { StepperProps } from './components/Stepper';
+
+export { Field } from './components/Field';
+export type { FieldProps, FieldCaptionPlacement } from './components/Field';
+
 export { Menu } from './components/Menu';
 export type { MenuProps, MenuItem } from './components/Menu';
 

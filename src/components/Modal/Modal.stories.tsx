@@ -31,3 +31,13 @@ export const MessageOnly: Story = {
     children: 'A dialog without actions, dismissed by clicking the backdrop or pressing Escape.',
   },
 };
+
+export const WithCloseControl: Story = {
+  args: {
+    isOpen: true,
+    title: 'settings',
+    hasCloseControl: true,
+    children: 'A dialog the user is expected to read through, so dismissing it is offered up front.',
+    actions: <Button>done</Button>,
+  },
+};

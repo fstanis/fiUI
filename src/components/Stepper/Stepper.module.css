@@ -1,0 +1,52 @@
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--fi-space-5);
+  font-family: var(--fi-font-mono);
+}
+
+.step {
+  font-family: var(--fi-font-mono);
+  font-size: 15px;
+  line-height: 1;
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--fi-border-strong);
+  border-radius: var(--fi-radius-md);
+  color: var(--fi-ink);
+  cursor: pointer;
+  transition:
+    background-color 0.12s ease,
+    border-color 0.12s ease,
+    color 0.12s ease;
+}
+
+.step:hover:not(:disabled) {
+  background: var(--fi-surface);
+}
+
+.step:focus-visible {
+  outline: none;
+  box-shadow: var(--fi-shadow-focus);
+}
+
+.step:disabled {
+  border-color: var(--fi-border);
+  color: var(--fi-ink-disabled);
+  cursor: not-allowed;
+}
+
+.value {
+  font-size: 15px;
+  font-weight: var(--fi-font-weight-medium);
+  /* Held wide so the steps stay put as the value's digits change; widen it per instance if needed. */
+  min-width: var(--fi-stepper-value-width, 38px);
+  text-align: center;
+  white-space: nowrap;
+  color: var(--fi-ink);
+}

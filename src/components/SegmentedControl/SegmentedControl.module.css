@@ -96,7 +96,8 @@
 .disabled .boxed .segment + .segment {
   border-left-color: var(--fi-border);
 }
+/* A frozen choice is still the user's choice, so it keeps the accent rather than reading as unset. */
 .disabled .boxed .selected {
-  background: var(--fi-border);
-  color: var(--fi-ink-faint);
+  background: var(--fi-accent-line);
+  color: #fff;
 }

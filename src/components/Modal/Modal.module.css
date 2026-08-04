@@ -31,9 +31,37 @@
   outline: none;
 }
 
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--fi-space-6);
+}
+
 .title {
   font-size: var(--fi-font-size-emphasis);
   font-weight: var(--fi-font-weight-medium);
+}
+
+.close {
+  font-family: var(--fi-font-mono);
+  font-size: var(--fi-font-size-body);
+  background: transparent;
+  border: none;
+  border-radius: var(--fi-radius-sm);
+  padding: 0;
+  color: var(--fi-ink-faint);
+  cursor: pointer;
+  transition: color 0.12s ease;
+}
+
+.close:hover {
+  color: var(--fi-ink);
+}
+
+.close:focus-visible {
+  outline: none;
+  box-shadow: var(--fi-shadow-focus);
 }
 
 .actions {

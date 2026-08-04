@@ -54,9 +54,26 @@
   background: var(--fi-surface);
 }
 
+.quiet {
+  padding: 0;
+  background: transparent;
+  color: var(--fi-ink-muted);
+  font-weight: var(--fi-font-weight-regular);
+  font-size: var(--fi-font-size-body);
+}
+.quiet:hover:not(:disabled) {
+  color: var(--fi-ink);
+}
+
 .button:disabled {
   cursor: not-allowed;
   background: var(--fi-border);
   border-color: transparent;
   color: var(--fi-ink-faint);
+}
+
+/* The shared disabled fill would give a borderless button a block of background it never had. */
+.quiet:disabled {
+  background: transparent;
+  color: var(--fi-ink-disabled);
 }
